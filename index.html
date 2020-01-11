@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+    <html>
+        <header>
+            <title>Coin Flipper</title>
+        </header>
+        <body>
+            <!-- coin-container -->
+            <div class = "coin-container" id =>
+                <h3 id = "coin"></h3>
+                <h4 class = "head">Head: 0</h4>
+                <h4 class = "tail">Tails: 0</h4>
+                <button onclick = 'coin_flipper()'>Flip Coin</button>
+            </div>
+            <!-- /coin-container -->
+
+
+            <script>
+                 function isEven(val) {
+                    if (val%2 === 0)
+                        return true;
+                    else
+                        return false;
+                }
+
+                let head_count = 0;
+                let tail_count = 0;
+                function coin_flipper(){
+
+                const even_odd=  Math.floor(Math.random() * 11);
+
+                if(isEven(even_odd))
+                {
+                    head_count++;
+                    document.querySelector('.head').innerHTML ='Head: ' +head_count;
+                    return document.getElementById('coin').innerHTML = "It's Head!";
+                }
+                else
+                {
+                    tail_count++;
+                    document.querySelector('.tail').innerHTML ='Tails: ' +tail_count;
+                    return document.getElementById('coin').innerHTML = "It's Tail!";
+                }
+
+                }
+
+             </script>
+        </body>
+    </html>
